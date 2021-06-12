@@ -16,7 +16,6 @@ jobs:
         uses: actions/cache@v2.1.4
         with:
           path: ~/.stack
-          key: stack
           key: ${{ runner.os }}-stack
           restore-keys: ${{ runner.os }}-stack
         
