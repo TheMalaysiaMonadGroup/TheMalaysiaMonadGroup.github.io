@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+:root {
+  --background: #FCFAF8;
+  --color-white: #fff;
+  --color-black: #181718;
+  --color-dark-grey: #171818;
+  --font-primary: 'Vollkorn', serif;
+  --h1-font-size: 80px;
+  --h1-m-font-size: 40px;
+  --h2-font-size: 70px;
+  --h2-m-font-size: 36px;
+  --h3-font-size: 60px;
+  --h3-m-font-size: 32px;
+  --h4-font-size: 50px;
+  --h4-m-font-size: 28px;
+  --h5-font-size: 40px;
+  --h5-m-font-size: 24px;
+  --h6-font-size: 30px;
+  --h6-m-font-size: 20px;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: var(--background);
+}
+
+body {
+  font-size: 22px;
+  color: var(--color-black);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-bottom: 200px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+}
+
+p {
+  line-height: 1.6;
+}
+
+nav {
+  text-align: right;
+  flex: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: black;
+  text-decoration: none;
+  margin-left: 2em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  padding: 3rem 0;
+}
+
+header .container {
+  display: flex;
+}
+
+.logo a {
+  font-family: var(--font-primary);
+  /* float: left; */
+  font-size: var(--h6-font-size);
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+section.main {
+  display: flex;
+}
+
+section.main h2 {
+  flex: 1;
+}
+
+.main-img {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-img img {
+  width: 60%;
+}
+
+footer {
+  background-color: var(--color-dark-grey);
+  padding: 4rem;
+  margin-top: 7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer * {
+  color: var(--color-white);
+}
+
+footer .logo a {
+  color: var(--color-white);
+}
