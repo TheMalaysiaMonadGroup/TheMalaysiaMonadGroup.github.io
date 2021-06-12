@@ -1,0 +1,33 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache stack folder
+        id: stack
+        uses: actions/cache@v2.1.4
+        with:
+          path: ~/.stack
+          key: stack
+          key: ${{ runner.os }}-stack
+          restore-keys: ${{ runner.os }}-stack
+        
+      - name: Build binary
+        run: stack build
+        
+      - name: Build website
+        run: stack exec site build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: _site # The folder the action should deploy.
